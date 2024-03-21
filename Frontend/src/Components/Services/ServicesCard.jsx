@@ -17,6 +17,7 @@ const ServicesCard = ({ item, index }) => {
           className="w-[44px] h-[44px] rounded-full border border-solid border-[#181a1e] mt-[30px] flex mx-auto items-center justidy-center group hover:bg-primaryColor hover:border=none" >
           <BsArrowRight className="group-hover:text-white w-6 h-5" />
         </Link>
+        <span className="w-[44px] h-[44px] flex items-center justify-center text-[19px] leading-[30px] font-[600]" style={{background:`${bgColor}`,color:`${textColor}`,borderRadius:"6px 0 0 6px",}}>{index +1}</span>
       </div>
     </div>
   );

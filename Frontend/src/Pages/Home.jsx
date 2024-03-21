@@ -6,9 +6,13 @@ import heroImg03 from "../Assets/images/hero-img03.png";
 import icon01 from "../Assets/images/icon01.png";
 import icon02 from "../Assets/images/icon02.png";
 import icon03 from "../Assets/images/icon03.png";
+import featureImg from "../Assets/images/feature-img.png";
+import videoIcon from "../Assets/images/video-icon.png";
+import avatarIcon from "../Assets/images/avatar-icon.png"
 import { BsArrowRight } from "react-icons/bs";
 import About from "../Components/About/About";
 import ServicesList from "../Components/Services/ServiceList";
+import DoctorList from "../Components/Doctors/DoctorList";
 
 const Home = () => {
   return (
@@ -34,7 +38,9 @@ const Home = () => {
                   facilis quis aut assumenda. Consequatur, adipisci pariatur
                   nulla explicabo vitae harum accusamus.
                 </p>
-                <button className="bg-blue-500 text-white py-2 px-4 rounded">Request an Appointment</button>
+                <button className="bg-blue-500 text-white py-2 px-4 rounded">
+                  Request an Appointment
+                </button>
               </div>
               {/* ==================hero counter========== */}
 
@@ -135,7 +141,7 @@ const Home = () => {
                 </p>
                 <Link
                   to="/doctors"
-                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#181a1e] mt-[30px] flex mx-auto items-center justidy-center group hover:bg-primaryColor hover:border=none"
+                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#181a1e] mt-[30px] flex mx-auto items-center justify-center group hover:bg-primaryColor hover:border=none"
                 >
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
@@ -190,7 +196,86 @@ const Home = () => {
           <ServicesList />
         </div>
       </section>
-      {/* ==================end============== */}
+      {/* ==================service section end============== */}
+      {/* =================feature section============= */}
+      <section>
+        <div className="container">
+          <div className="flex items-center justify-between flex-col lg:flex-row">
+            <div className="xl:w-[670px]">
+              <h2 className="text-[36px] leading-[46px] text-headingColor font-[800] text-center">
+                Get Virtual treatment
+                <br /> anytime.
+              </h2>
+              <ul className="pl-4">
+                <li className="text__para">
+                  1.Schedule the appointment directly.
+                </li>
+                <li className="text__para">
+                  2.Search for your physician here, and contact their office.
+                </li>
+                <li className="text__para">
+                  3. View our physicians who are accepting new patients , use
+                  the online scheduling tool to select an appointment.
+                </li>
+              </ul>
+              <Link to="/">
+                {" "}
+                <button className="bg-blue-500 text-white py-2 px-4 rounded">
+                  Learn More
+                </button>
+              </Link>
+            </div>
+            <div className="relative flex justify-end mt-[50px] lg:mt-0 z-10 xl:w-[770px]">
+              <img src={featureImg} alt="feature Image" className="w-3/4" />
+              <div className="w--[150px] lg:w-[240px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:pb-[26px] rounded-[10px]">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-[6px] lg:gap-3">
+                    <p className="text-[10px[ leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor font-[600]">
+                      Tue, 24
+                    </p>
+                    <p className="text-[10px[ leading-[10px] lg:text-[14px] lg:leading-5 text-textColor font-[400]">
+                      10:00am
+                    </p>
+                  </div>
+                  <span className="w-5 h-5 lg:w-[34px] lg:h-[34px] flex items-center justify-center bg-yellowColor rounded py-1 px-[6px] lg:py-3 lg:px-[10px]">
+                    <img src={videoIcon} alt="Video Icon" />
+                  </span>
+                </div>
+
+                <div className="w-[65px] lg:w-[96px] bg-[#ccf0f3] py-1 px-2 rounded-full lg:py-[6px] text-[8px] leading-[8px] lg:text-[12px] lg:leading-4 text-irisBlueColor font-[600]  mt-2 lg:mt-4">
+                  Consultation
+                </div>
+                <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[18px]">
+              <img src={avatarIcon} alt="avatarIcon" />
+              <h4 className="text-[10px] leading-3 lg:text-[17px] lg:leading-[22px] font-[800] text-headingColor">
+                Wayne Collins Joe
+              </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* =========feature section end========= */}
+
+      {/* ================ our great doctors===========*/}
+<section>
+      <div className="container">
+      <div className="xl:w-[470px] mx-auto">
+            <h2 className="text-[36px] leading-[46px] text-headingColor font-[800] text-center">
+              Our great doctors
+            </h2>
+            <p className="text__para text-center">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
+              nihil? Eos, possimus similique iusto voluptate reiciendis
+              laboriosam fugit, quo consequuntur architecto velit pariatur
+              facilis magnam animi qui culpa temporibus amet.
+            </p>
+          </div>
+          <DoctorList />
+      </div>
+      </section>
+      {/* ==============great doctorsend ============== */}
     </>
   );
 };

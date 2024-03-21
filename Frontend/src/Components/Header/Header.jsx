@@ -47,14 +47,16 @@ const Header = () => {
   return (
     <header className="header flex items-center" ref={headerRef}>
       <div className="container">
-        <div className="flex item-center justify-between">
+        <div className="flex items-center justify-between">
           {/* ================logo=========== */}
           <div>
+            <Link to='/'>
             <img src={logo} alt="Logo Image" />
+            </Link>
           </div>
           {/* ===============menu content============ */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-            <ul className="menu flex item-center gap-[2rem]">
+            <ul className="menu flex items-center gap-[2rem]">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink
@@ -72,7 +74,7 @@ const Header = () => {
             </ul>
           </div>
           {/* ===============nav right============= */}
-          <div className="flex item-center gap-4">
+          <div className="flex items-center gap-4">
             <div className="hidden">
               <Link to='/'>
                 <figure className="w-[35px] h-[35px] rounded-full" >
@@ -82,7 +84,7 @@ const Header = () => {
             </div>
 
             <Link to="/login">
-              <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex item-center justify-center rounded-[50px]">Login</button>
+              <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[50px]">Login</button>
             </Link>
             <span className="md:hidden" onClick={toggleMenu}>
               <BiMenu className="w-6 h-6 cursor-pointer"/>
