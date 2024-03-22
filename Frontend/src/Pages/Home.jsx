@@ -282,8 +282,8 @@ const Home = () => {
       {/* -=================faq section=========== */}
       <section>
         <div className="container">
-          <div className="flex justify-between gap-[60px] lg:gap-0">
-            <div>
+          <div className="flex justify-between gap-[50px] lg:gap-0">
+            <div className="w-full md:w-1/2 hidden md:block">
               <img src={fagImg} alt="fag image" />
             </div>
             <div className="w-full md:w-1/2">
