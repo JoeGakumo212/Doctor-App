@@ -8,11 +8,14 @@ import icon02 from "../Assets/images/icon02.png";
 import icon03 from "../Assets/images/icon03.png";
 import featureImg from "../Assets/images/feature-img.png";
 import videoIcon from "../Assets/images/video-icon.png";
-import avatarIcon from "../Assets/images/avatar-icon.png"
+import avatarIcon from "../Assets/images/avatar-icon.png";
+import fagImg from "../Assets/images/faq-img.png";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../Components/About/About";
 import ServicesList from "../Components/Services/ServiceList";
 import DoctorList from "../Components/Doctors/DoctorList";
+import FaqList from "../Components/Faq/FaqList";
+import Testimonial from "../Components/Testimonials/Testimonial";
 
 const Home = () => {
   return (
@@ -246,10 +249,10 @@ const Home = () => {
                   Consultation
                 </div>
                 <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[18px]">
-              <img src={avatarIcon} alt="avatarIcon" />
-              <h4 className="text-[10px] leading-3 lg:text-[17px] lg:leading-[22px] font-[800] text-headingColor">
-                Wayne Collins Joe
-              </h4>
+                  <img src={avatarIcon} alt="avatarIcon" />
+                  <h4 className="text-[10px] leading-3 lg:text-[17px] lg:leading-[22px] font-[800] text-headingColor">
+                    Wayne Collins Joe
+                  </h4>
                 </div>
               </div>
             </div>
@@ -259,9 +262,9 @@ const Home = () => {
       {/* =========feature section end========= */}
 
       {/* ================ our great doctors===========*/}
-<section>
-      <div className="container">
-      <div className="xl:w-[470px] mx-auto">
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
             <h2 className="text-[36px] leading-[46px] text-headingColor font-[800] text-center">
               Our great doctors
             </h2>
@@ -273,9 +276,43 @@ const Home = () => {
             </p>
           </div>
           <DoctorList />
-      </div>
+        </div>
       </section>
       {/* ==============great doctorsend ============== */}
+      {/* -=================faq section=========== */}
+      <section>
+        <div className="container">
+          <div className="flex justify-between gap-[60px] lg:gap-0">
+            <div>
+              <img src={fagImg} alt="fag image" />
+            </div>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-[30px]">Most questions by our beloved patients</h2>
+            <FaqList />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ============faq end============ */}
+
+      {/* ================testimonials========== */}
+<section>
+  <div className="container">
+  <div className="xl:w-[470px] mx-auto">
+            <h2 className="text-[36px] leading-[46px] text-headingColor font-[800] text-center">
+              What our patient says
+            </h2>
+            <p className="text__para text-center">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
+              nihil? Eos, possimus similique iusto voluptate reiciendis
+              laboriosam fugit, quo consequuntur architecto velit pariatur
+              facilis magnam animi qui culpa temporibus amet.
+            </p>
+          </div>
+          <Testimonial />
+  </div>
+</section>
+      {/* ================end of testimonials======== */}
     </>
   );
 };

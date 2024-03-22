@@ -42,11 +42,11 @@ const DoctorCard = ({ doctor }) => {
           </p>
         </div>
         <Link
-                  to="/doctors"
-                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#181a1e] mt-[30px] flex items-center justify-center group hover:bg-primaryColor hover:border=none"
-                >
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
+          to="/doctors"
+          className="w-[44px] h-[44px] rounded-full border border-solid border-[#181a1e] mt-[30px] flex items-center justify-center group hover:bg-primaryColor hover:border=none"
+        >
+          <BsArrowRight className="group-hover:text-white w-6 h-5" />
+        </Link>
       </div>
     </div>
   );

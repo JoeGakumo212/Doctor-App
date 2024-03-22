@@ -78,7 +78,7 @@ const Header = () => {
             <div className="hidden">
               <Link to='/'>
                 <figure className="w-[35px] h-[35px] rounded-full" >
-                  <img src={userImg} alt=""  className="w-full-rounded-full"/>
+                  <img src={userImg} alt=""  className="w-full rounded-full"/>
                 </figure>
               </Link>
             </div>
